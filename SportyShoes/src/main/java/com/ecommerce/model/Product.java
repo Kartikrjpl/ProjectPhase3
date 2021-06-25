@@ -1,5 +1,7 @@
 package com.ecommerce.model;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -22,6 +24,8 @@ public class Product {
 	@Column(name = "season")
 	private String season;
 	
+	
+
 	@Column(name = "brand")
 	private String brand;
 	
@@ -35,7 +39,7 @@ public class Product {
 	private String color;
 	
 	@Column(name = "created_date")
-	private String created_date;
+	private Date created_date;
 	
 	@Column(name = "discount")
 	private int discount;
@@ -43,7 +47,7 @@ public class Product {
 	public Product() {
 		super();
 	}
-	public Product(int id, String season, String brand, String category, float price, String color, String created_date,
+	public Product(int id, String season, String brand, String category, float price, String color, Date created_date,
 			int discount) {
 		super();
 		this.id = id;
@@ -104,11 +108,11 @@ public class Product {
 		this.color = color;
 	}
 
-	public String getcreated_date() {
+	public Date getcreated_date() {
 		return created_date;
 	}
 
-	public void setcreated_date(String created_date) {
+	public void setcreated_date(Date created_date) {
 		this.created_date = created_date;
 	}
 
